@@ -1,0 +1,26 @@
+<form [formGroup]="loginSignupForm">
+    <div  class="example-container">
+        <mat-form-field appearance="standard">
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="name">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Enter Email/Phone Number</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="email">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter password</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="password">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <div mat-dialog-actions>
+            <button mat-button (click)="onSubmit()">Login</button>
+            <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Request OTP</button>
+        </div>
+    </div>
+    <!-- <div mat-dialog-actions *ngIf="loggedIn">
+        <button mat-button (click)="onLogout()">Logout</button>
+    </div> -->
+</form>
